@@ -52,7 +52,9 @@ namespace PortionCalculator
         public void NumWithDecimal(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == '.'))
-            { e.Handled = true; }
+            {
+                e.Handled = true;
+            }
             TextBox txtDecimal = sender as TextBox;
             if (e.KeyChar == '.' && txtDecimal.Text.Contains("."))
             {
